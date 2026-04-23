@@ -3,7 +3,7 @@ import requests
 class Regions:
     """
     Инициализащция:
-        params: (data, status_code = None, None) в случае ошибки вызова функ: def -> get_data и get_status.
+        функции: data и status_code = None= в случае ошибки вызова except в get_response.
     """
     def __init__(self, url=None,q=None, country_code=None, page_size=None, page=None):
         self.url = url
@@ -14,9 +14,8 @@ class Regions:
         self.data = None
         self.status_code = None
 
-
     def get_response(self):
-        res = None  # ← чтобы except ValueError мог безопасно обратиться к res
+        res = None  # none ← для except ValueError мог безопасно обратиться к res
 
         try:
             # Иницинируем список для параметров зывозы.
@@ -42,7 +41,7 @@ class Regions:
                 self.status_code = status_code
                 return data, status_code
             else:
-                print(f"Ошибка: статус != 200 {status_code}")
+                print(f"\n\nОшибка: статус != 200 == {status_code}")
                 self.status_code = status_code
                 return None, status_code
 
