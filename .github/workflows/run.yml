@@ -25,3 +25,8 @@ jobs:
         run: python -m src.main
         env:
           BASE_URL: ${{ secrets.BASE_URL }}
+
+      - name: Run tests
+        run: pytest tests/test_main.py -v
+        env:
+          BASE_URL: ${{ secrets.BASE_URL }}
