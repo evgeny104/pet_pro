@@ -21,11 +21,6 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Run script
-        run: python -m src.main
-        env:
-          BASE_URL: ${{ secrets.BASE_URL }}
-
       - name: Run tests
         run: python -m pytest tests/test_main.py -v
         env:
