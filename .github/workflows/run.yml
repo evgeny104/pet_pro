@@ -30,3 +30,4 @@ jobs:
         run: pytest tests/test_main.py -v
         env:
           BASE_URL: ${{ secrets.BASE_URL }}
+          PYTHONPATH: ${{ github.workspace }}
