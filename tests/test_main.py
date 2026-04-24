@@ -3,11 +3,6 @@ from src.config import BASE_URL
 import pytest
 
 
-from src.main import Regions
-from src.config import BASE_URL
-import pytest
-
-
 @pytest.fixture
 def region_response(request):
     """

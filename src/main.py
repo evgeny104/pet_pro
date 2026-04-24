@@ -18,7 +18,7 @@ class Regions:
         res = None  # none ← для except ValueError мог безопасно обратиться к res
 
         try:
-            # Иницинируем список для параметров зывозы.
+            # Инициннируем список для параметров вызова.
             params = {}
 
             if self.q:
