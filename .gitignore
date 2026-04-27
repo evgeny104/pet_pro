@@ -19,6 +19,14 @@ venv.bak/
 htmlcov/
 *.cover
 
+# Allure
+allure-results/
+allure-report/
+
+# Playwright
+playwright-report/
+test-results/
+
 # IDE
 .vscode/
 .idea/
